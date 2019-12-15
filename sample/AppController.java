@@ -47,7 +47,7 @@ public class AppController implements Initializable {
 		machineImage = new ImageView("file:coffeMach.png");
 		cupImage = new ImageView("file:CupEm.png");
 		cupImage.relocate(315, 225);
-		
+
 		Tooltip.install(cupImage, new Tooltip("Type: " + cup.getContent() + "\nSugar: " + cup.getSugarLevel()));
 
 		sugarLevelText = new Text("3");
@@ -120,27 +120,21 @@ public class AppController implements Initializable {
 		changeTypeButton.setOnMouseClicked(e -> {
 			// CODE HERE
 			coffeeMachine.nextType();
-			coffeeTypeText.setText(coffeeMachine.getCurrentMode().toString().substring(0,1));
+			coffeeTypeText.setText(coffeeMachine.getCurrentMode().toString().substring(0, 1));
 
 		});
 
 		makeCoffeeButton.setOnMouseClicked(e -> {
 			// CODE HERE
-			if (coffeeMachine.isCupInside()){
-				coffeeMachine.makeCoffee();;
+			if (coffeeMachine.isCupInside()) {
+				coffeeMachine.makeCoffee();
+				;
 				cupImage.setImage(new Image("file:" + coffeeMachine.getCurrentMode().toString() + ".png"));
-			}
-			else {
+			} else {
 				System.out.println("Please insert cup");
 			}
 
-
-
-
-
 		});
 	}
-
-
 
 }
