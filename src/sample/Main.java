@@ -15,8 +15,8 @@ public class Main extends Application {
 			Scene scene = new Scene(root);
 			primaryStage.setScene(scene);
 			primaryStage.show();
-			
-		//tests
+
+			// tests
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -24,8 +24,6 @@ public class Main extends Application {
 
 	public static void main(String[] args) {
 		launch(args);
-
-
 
 	}
 }
