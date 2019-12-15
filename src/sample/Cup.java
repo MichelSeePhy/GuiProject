@@ -14,7 +14,6 @@ public class Cup implements CupInterface {
 		this.content = content;
 		this.sugarLevel = sugarLevel;
 
-
 	}
 
 	@Override
@@ -25,11 +24,10 @@ public class Cup implements CupInterface {
 
 	@Override
 	public boolean isEmpty() {
-		if (this.content == null){
+		if (this.content == null) {
 			return true;
-		}
-		else {
-		return false;
+		} else {
+			return false;
 		}
 	}
 

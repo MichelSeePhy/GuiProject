@@ -103,29 +103,23 @@ public class AppController implements Initializable {
 
 	private void setActions() {
 		decrementSugarButton.setOnMouseClicked(e -> {
-
-			coffeeMachine.decrementSugar();
+		coffeeMachine.decrementSugar();
 			sugarLevelText.setText("" + coffeeMachine.getSugarLevel());
-			// CODE HERE
-
 		});
 
 		incrementSugarButton.setOnMouseClicked(e -> {
-			// CODE HERE
 			coffeeMachine.incrementSugar();
 			sugarLevelText.setText("" + coffeeMachine.getSugarLevel());
 
 		});
 
 		changeTypeButton.setOnMouseClicked(e -> {
-			// CODE HERE
 			coffeeMachine.nextType();
 			coffeeTypeText.setText(coffeeMachine.getCurrentMode().toString().substring(0, 1));
 
 		});
 
 		makeCoffeeButton.setOnMouseClicked(e -> {
-			// CODE HERE
 			if (coffeeMachine.isCupInside()) {
 				coffeeMachine.makeCoffee();
 				;

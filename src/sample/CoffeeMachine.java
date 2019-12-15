@@ -32,10 +32,9 @@ public class CoffeeMachine implements CoffeeMachineInterface {
 
 	@Override
 	public boolean isCupInside() {
-		if (this.cup != null){
+		if (this.cup != null) {
 			return true;
-		}
-		else {
+		} else {
 			return false;
 		}
 	}
@@ -54,32 +53,29 @@ public class CoffeeMachine implements CoffeeMachineInterface {
 
 	@Override
 	public void incrementSugar() {
-		if (sugarLevel < 5){
-		sugarLevel ++;
-		System.out.println("Sugar incremented +1");
-		}
-		else {
+		if (sugarLevel < 5) {
+			sugarLevel++;
+			System.out.println("Sugar incremented +1");
+		} else {
 			System.out.println("Cannot increment");
 		}
 	}
 
 	@Override
 	public void decrementSugar() {
-		if (sugarLevel > 0){
-			sugarLevel --;
+		if (sugarLevel > 0) {
+			sugarLevel--;
 			System.out.println("Sugar decremented -1");
-		}
-		else {
+		} else {
 			System.out.println("Cannot decrement");
 		}
 	}
 
 	@Override
 	public void makeCoffee() {
-		if (isCupInside()){
+		if (isCupInside()) {
 			cup.fillUp(currentMode, sugarLevel);
-		}
-		else {
+		} else {
 			System.out.println("Please insert the cup");
 		}
 
